@@ -10,13 +10,13 @@ export function HomePage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/products") //asynchronous code - promise
+      .get("/api/products") //asynchronous code - promise
       .then((response) => {
         setProducts(response.data);
       });
 
     axios
-    .get("http://localhost:3000/api/cart-items")
+    .get("/api/cart-items")
     .then((response) => {
       setCart(response.data);
     });
